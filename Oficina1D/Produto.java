@@ -106,13 +106,17 @@ public abstract class Produto implements Comparable<Produto>{
      * @param outro Produto a ser comparado
      * @return Int de acordo com a regra padrão de Comparable (descrita acima)
      */
+    /* 
     public int compareTo(Produto outro){
-    	if (this.idProduto == outro.idProduto)
+    	if (this.descricao == outro.descricao)
     		return 0;
     	else if (this.idProduto < outro.idProduto)
     		return -1;
     	else
     		return 1;
+    }*/
+    public int compareTo(Produto outro) {
+        return this.descricao.compareToIgnoreCase(outro.descricao);
     }
     
     /**
